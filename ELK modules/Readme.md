@@ -3,10 +3,10 @@ This project is for fast checking whether ELK installation is complete and start
 Moreover, it can also help you to apply your ELK modules. 
 
 # Quick start
-Step1. put this ELK-project folder under your server. 
-Step2. operate `__init__.py` which is under this folder.  
-Step3. Answer all of the questions. (More detailed introduction will be put below ) 
-Step4. Finish.  
+Step1. put this ELK-project folder under your server.   
+Step2. operate `__init__.py` which is under this folder.    
+Step3. Answer all of the questions. (More detailed introduction will be put below )   
+Step4. Finish.    
 
 # Functions of this project
 * Check the service status  
