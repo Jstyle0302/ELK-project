@@ -1,0 +1,56 @@
+input {
+	# Receive the data from port 8514
+	syslog {
+    	        port =><%=setting("var.input.port",8514)%>
+	  	type => "rsyslog"
+  	}
+}
+
+filter {
+	# Only filter the data which has the "sshd" label and divide it into sshd_info and log_info
+	if [program] == "sshd" {
+		
+		# The login/logout example: 
+		# pam_unix(sshd:session): session opened for user root by (uid=0)
+		# pam_unix(sshd:session): session opened for user nSpectrum by (uid=0)
+		# pam_unix(sshd:session): session closed for user root
+		# pam_unix(sshd:session): session closed for user joe
+		if ("pam_unix(sshd:session):" in [message]) and ("Interrupted system call" not in [message]) { 
+			grok {
+				match  => ["message", "%{GREEDYDATA}session %{WORD:log_status} for user %{USERNAME:user}%{GREEDYDATA}"]
+			}
+    }
+
+		# The login failure example: 
+		# Failed password for joe from 192.168.0.27 port 14592 ssh2
+		# Failed password for invalid user Trump from 192.168.0.27 port 14594 ssh2
+		if "Failed" in [message] {
+			grok {
+				match  => ["message", "%{GREEDYDATA}%{WORD:login_status} password for %{DATA:user} from %{IPV4:failed_connect_ip}%{GREEDYDATA}"]
+			}
+    }
+		# Convert the terms of login_status to more human-friendly
+		if [log_status] == "opened" {
+			mutate {
+				replace => [ "log_status" , "Login" ]
+        copy => { "log_status" => "login_status" }
+			}
+		}
+		if [log_status] == "closed" {
+			mutate {
+				replace => [ "log_status" , "Logout" ]
+			}
+		}
+    
+	}
+}
+output {
+#	elasticsearch {
+#		hosts => ["http://192.168.0.45:9200"]
+#		index => "rsystem-%{+YYYY.MM.dd}"
+#	}
+	<%= elasticsearch_output_config() %>
+#	stdout{
+#		codec =>"rubydebug"
+#	}
+}

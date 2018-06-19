@@ -1,0 +1,10 @@
+{
+	"title": "winsystem_useState",
+    "visState": "{\"title\":\"winsystem_useState\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"task\",\"include\":\"\\\"登入\\\"|\\\"登出\\\"\",\"size\":2,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Use State\"}}]}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"index\":\"winsystem-*\",\"filter\":[{\"meta\":{\"index\":\"winsystem-*\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"keywords\",\"value\":\"稽核成功\",\"params\":{\"query\":\"稽核成功\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"keywords\":{\"query\":\"稽核成功\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+    }
+}

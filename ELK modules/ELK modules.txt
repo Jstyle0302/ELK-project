@@ -1,0 +1,71 @@
+.
+├── __init__.py
+├── modules
+│   ├── rsystem
+│   │   ├── configuration
+│   │   │   ├── elasticsearch
+│   │   │   │   └── rsystem.json
+│   │   │   ├── kibana
+│   │   │   │   └── 6.x
+│   │   │   │       ├── dashboard
+│   │   │   │       │   ├── 9c8b6bb0-49d3-11e8-aee4-91bd84848703.json
+│   │   │   │       │   └── rsystem.json
+│   │   │   │       ├── index-pattern
+│   │   │   │       │   └── rsystem.json
+│   │   │   │       ├── search
+│   │   │   │       │   ├── 13138290-4f6f-11e8-aee4-91bd84848703.json
+│   │   │   │       │   └── rsystem.json
+│   │   │   │       └── visualization
+│   │   │   │           ├── 2d62d8e0-49d3-11e8-aee4-91bd84848703.json
+│   │   │   │           ├── 5b5dc840-49d3-11e8-aee4-91bd84848703.json
+│   │   │   │           ├── 9723b660-49d2-11e8-aee4-91bd84848703.json
+│   │   │   │           ├── aff1f670-49d2-11e8-aee4-91bd84848703.json
+│   │   │   │           ├── dacce120-49d2-11e8-aee4-91bd84848703.json
+│   │   │   │           ├── f4818990-49d2-11e8-aee4-91bd84848703.json
+│   │   │   │           └── rsystem.json
+│   │   │   └── logstash
+│   │   │       └── rsystem.conf.erb
+│   │   ├── lib
+│   │   │   └── logstash_registry.rb
+│   │   └── README.md
+│   └── winsystem
+│       ├── configuration
+│       │   ├── elasticsearch
+│       │   │   └── winsystem.json
+│       │   ├── kibana
+│       │   │   └── 6.x
+│       │   │       ├── dashboard
+│       │   │       │   ├── 1c3aa620-51bb-11e8-aee4-91bd84848703.json
+│       │   │       │   └── winsystem.json
+│       │   │       ├── index-pattern
+│       │   │       │   └── winsystem.json
+│       │   │       ├── search
+│       │   │       │   ├── f1f64ec0-51bd-11e8-aee4-91bd84848703.json
+│       │   │       │   └── winsystem.json
+│       │   │       └── visualization
+│       │   │           ├── 31105140-51ba-11e8-aee4-91bd84848703.json
+│       │   │           ├── 3fb70a00-51b9-11e8-aee4-91bd84848703.json
+│       │   │           ├── 78f1eb00-51b9-11e8-aee4-91bd84848703.json
+│       │   │           ├── 9fe84880-51b9-11e8-aee4-91bd84848703.json
+│       │   │           ├── b0cd6da0-51ba-11e8-aee4-91bd84848703.json
+│       │   │           ├── e4b0ed00-51b9-11e8-aee4-91bd84848703.json
+│       │   │           └── winsystem.json
+│       │   └── logstash
+│       │       └── winsystem.conf.erb
+│       ├── lib
+│       │   └── logstash_registry.rb
+│       └── README.md
+├── modules_list.py
+├── modules_list.pyc
+├── ELK modules.txt
+└── program
+    ├── check_firewall.py
+    ├── check_firewall.pyc
+    ├── check_jvm.py
+    ├── check_jvm.pyc
+    ├── check_service.py
+    ├── check_service.pyc
+    ├── operate_module.py
+    └── operate_module.pyc
+
+24 directories, 45 files
