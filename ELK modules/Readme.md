@@ -12,7 +12,7 @@ Environment
 - Logstash version: 6.0.0
 - Monitored environment: CentOS 7.4, Windows Server 2008
 
--
+
 Quick start
 -----------
 Step1. put this ELK-project folder under your server.    
@@ -45,8 +45,8 @@ If you only want to check the jvm size, you can operate the `check_jvm.py` direc
 
 Check the firewall
 ------------------
-This will ask you the firewall ports' number you want to check. After typing the number, the program will tell you the conditions of the tcp and udp protocal of your port numbers. 
-*_Please remember that this program will only tell you the conditions of your port number and will not help you to start or stop them. Those demands should be realized and executed by yourselves since we think it is the network security problem and is better to do by you instead of us._*
+This will ask you the firewall ports' number you want to check. After typing the number, the program will tell you the conditions of the tcp and udp protocal of your port numbers.  
+_*(Please remember that this program will only tell you the conditions of your port number and will not help you to start or stop them. Those demands should be realized and executed by yourselves since we think it is the network security problem and is better to do by you instead of us.)*_
 
 If you only want to check the jvm size, you can operate the `check_firewall.py` directly, which is in `./program/check_firewall.py`. The command for python2.7 would be: `python check_firewall.py`
 
