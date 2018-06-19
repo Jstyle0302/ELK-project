@@ -45,7 +45,9 @@ If you only want to check the jvm size, you can operate the `check_jvm.py` direc
 
 Check the firewall
 ------------------
+This will ask you the firewall ports' number you want to check. After typing the number, the program will tell you the conditions of the tcp and udp protocal of your port numbers. (*Please remember that this program will only tell you the conditions of your port number and will not help you to start or stop them. Those demands should be realized and executed by yourselves since we think it is the network security problem and is better to do by you instead of us.*)
 
+If you only want to check the jvm size, you can operate the `check_firewall.py` directly, which is in `./program/check_firewall.py`. The command for python2.7 would be: `python check_firewall.py`
 
 Check the module
 ----------------
