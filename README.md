@@ -33,7 +33,7 @@ Check the service status
 ------------------------
 The default services should be started after ELK was installed are `Elasticsearch.service` and the `Kibana.service`. We will help you to start those two service by systemctl.  
 
-If you need to check more services, such as Logstash.service, you could edit the `./__init__.py` and modify the parameter `service_list` directly or operate the check_service.py, which is in `./program/check_service.py`. The command for python2.7 would be: `python check_service.py`
+If you need to check more services, such as Logstash.service, you could edit the [__init__.py](./__init__.py) and modify the parameter `service_list` directly or operate the check_service.py, which is in `./program/check_service.py`. The command for python2.7 would be: `python check_service.py`
 
 
 Check the jvm
