@@ -1,7 +1,7 @@
 Introduction
 ============
 This project is for fast checking whether ELK installation is complete and start the service. 
-Moreover, it can also help you to apply your ELK modules. 
+Moreover, it can also help you to apply your ELK modules quickly and you can realize the power of ELK without any experience on ELK.  
 
 
 Environment
@@ -57,3 +57,9 @@ ELK modularization has a strong function that it can transfer its configuration 
 In this part, this program will ask you which module in the [modules_list.py](./modules_list.py) you want to set up and move them to the `logstash/modules/` folder so that the logstash can operate it . (You can edit the `modules_list.py` and add new modules into it if you create a new modules down the road. But, please remember to put your new modules into the `modules` folder.) Moreover, it will also write some commands in the `rc.local` file so that your modules will be restarted automatically after each time you reboot your system. This can help you to reduce the worries of the modules condition and do not need to think that question: *Is my modules still alive?*
 
 Again, you can also run this function independently by [operate_module.py](./program/operate_module.py). The command for python2.7 would be: `python operate_module.py`
+
+
+Note
+----
+All of my print function in python have already been replaced by my new super_print function. It is because of that this new function can help the users to record the process and all setting they did while they were running this program. They can check all of the setting they did by the `output.txt` after many days or even know the previous users' setting readily. Thus, no matter which function you operate, the `__init__.py` or each small functions directly, please remember to include the [super_stdio](./program/super_stdio.py) which is in `./program/super_stdio.py`    
+If you find the output.txt is a little confusing when you use the `vim` command to read it, it is normal and is because of that the `vim` editing tool cannot realize the special word decorator. You can use the `cat output.txt` to review it and it will be more comfortable to read.
