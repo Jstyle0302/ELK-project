@@ -23,7 +23,7 @@ filter {
 
 		# The login failure example: 
 		# Failed password for joe from 192.168.0.27 port 14592 ssh2
-		# Failed password for invalid user Trump from 192.168.0.27 port 14594 ssh2
+		# Failed password for invalid user Satan from 192.168.0.27 port 14594 ssh2
 		if "Failed" in [message] {
 			grok {
 				match  => ["message", "%{GREEDYDATA}%{WORD:login_status} password for %{DATA:user} from %{IPV4:failed_connect_ip}%{GREEDYDATA}"]
