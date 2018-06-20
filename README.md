@@ -61,5 +61,6 @@ Again, you can also run this function independently by [operate_module.py](./pro
 
 Note
 ----
-All of my print function in python have already been replaced by my new super_print function. It is because of that this new function can help the users to record the process and all setting they did while they were running this program. They can check all of the setting they did by the `output.txt` after many days or even know the previous users' setting readily. Thus, no matter which function you operate, the `__init__.py` or each small functions directly, please remember to include the [super_stdio](./program/super_stdio.py) which is in `./program/super_stdio.py`    
+All of my print function in python have already been replaced by my new super_print function. It is because of that this new function can help the users to record the process and all setting they did while they were running this program. They can check all of the setting they did by the `output.txt` after many days or even know the previous users' setting readily. Thus, no matter which function you operate, the `__init__.py` or each small functions directly, please remember to include the [super_stdio](./program/super_stdio.py) which is in `./program/super_stdio.py`.    
+
 If you find the output.txt is a little confusing when you use the `vim` command to read it, it is normal and is because of that the `vim` editing tool cannot realize the special word decorator. You can use the `cat output.txt` to review it and it will be more comfortable to read.
