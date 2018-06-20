@@ -52,3 +52,8 @@ If you only want to check the jvm size, you can operate the [check_firewall.py](
 
 Check the module
 ----------------
+ELK modularization has a strong function that it can transfer its configuration of elasticsearch, logstash and kibana from one server to another server quickly and set up all properties automatically. The official Elatic provides us the basic modules, Netflow and fb_apache, which is under the `logstash/modules/` folder and you can easily find them and operate them by this command: `logstash/bin/logstash --modules YourModuleName`. 
+
+In this part, this program will help to check which module in the [modules_list.py](./modules_list.py) you want to set up and move it to the `logstash/modules/` folder so that the logstash can operate it automatically. Moreover, it will also write some commands in the `rc.local` file so that the modules will be restart after each time you reboot your system. This can help you to reduce the worries of the modules condition and do not need to think that question: *Is my modules alive?*
+
+Again, you can also run this function independently by [operate_module.py](./program/operate_module.py). The command for python2.7 would be: `python operate_module.py`
